@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BetterRX DME Direct — UI Reference Gallery</title>
+<style>
+:root { --ink: #24313d; --muted: #6e7881; --line: #e8e3dd; --coral: #f56f61; --bg: #f6f5f2; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+header { background: #fff; border-bottom: 1px solid var(--line); padding: 24px 32px; position: sticky; top: 0; z-index: 10; }
+header h1 { margin: 0; font-size: 24px; }
+header p { margin: 6px 0 0; color: var(--muted); }
+.toc { background: #fff; border-bottom: 1px solid var(--line); padding: 16px 32px; display: flex; flex-wrap: wrap; gap: 8px; }
+.toc a { font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 8px; background: #f0f1f2; color: var(--ink); text-decoration: none; white-space: nowrap; }
+.toc a:hover { background: #fff0ed; color: var(--coral); }
+main { max-width: 1400px; margin: 0 auto; padding: 32px; }
+.section-heading { margin: 48px 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--line); }
+.section-heading h2 { margin: 0; font-size: 20px; }
+.section-heading p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); gap: 24px; margin-bottom: 32px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.card-label { padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.card-label strong { display: block; font-size: 14px; }
+.card-label span { font-size: 12px; color: var(--muted); }
+.card img { width: 100%; height: auto; display: block; }
+.mobile-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.mobile-grid .card img { max-width: 390px; margin: 0 auto; }
+footer { text-align: center; padding: 32px; color: var(--muted); font-size: 12px; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } main { padding: 16px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>BetterRX DME Direct — UI Reference Gallery</h1>
+  <p>26 captured screens covering all provider roles, vendor workflows, and mobile responsive views. Generated August 15, 2026.</p>
+</header>
+
+<nav class="toc">
+  <a href="#auth">Auth & Landing</a>
+  <a href="#new-order">New Order Wizard</a>
+  <a href="#orders">Order Management</a>
+  <a href="#don">DON / Clinical Views</a>
+  <a href="#executive">Executive</a>
+  <a href="#vendor">Vendor Screens</a>
+  <a href="#mobile">Mobile Responsive</a>
+</nav>
+
+<main>
+
+<!-- AUTH & LANDING -->
+<div class="section-heading" id="auth">
+  <h2>Authentication & Landing</h2>
+  <p>Entry points for providers, vendors, and network enrollment.</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>01 — Landing Page</strong><span>Portal selection: Care Providers / DME Vendors / Network enrollment</span></div>
+    <img src="01-landing.png" alt="Landing page" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>02 — Provider Role Selection</strong><span>Demo role picker: Admission Nurse, Charge Nurse, DON, Executive</span></div>
+    <img src="02-provider-login.png" alt="Provider login" loading="lazy">
+  </div>
+</div>
+
+<!-- NEW ORDER WIZARD -->
+<div class="section-heading" id="new-order">
+  <h2>New Order Wizard (4 Stages)</h2>
+  <p>Progressive order creation: Patient → Standing Orders → Vendor & Risk → Review</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>03 — Admission Nurse Home / Action Center</strong><span>Active metrics, attention items, approval inbox, shift handoff</span></div>
+    <img src="03-admission-home.png" alt="Admission home" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>04 — Stage 1: Patient & Admission</strong><span>EHR pull, patient search, delivery address</span></div>
+    <img src="04-new-order-patient.png" alt="New order patient" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>05 — Duplicate Equipment Detection</strong><span>Blocking flag with 4 disposition paths; audited resolution required</span></div>
+    <img src="05-new-order-ehr-duplicate.png" alt="Duplicate detection" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>06 — Stage 2: Standing Orders Verification</strong><span>Saved bundles, preauthorized categories, item selection, clinician attestation</span></div>
+    <img src="06-new-order-standing.png" alt="Standing orders" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>07 — Vendor Verification Contact Card</strong><span>4 Yes/No confirmations + mandatory comment; any No blocks advancement</span></div>
+    <img src="07-vendor-verification-modal.png" alt="Vendor verification modal" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>08 — Stage 3: Vendor & Risk Selection</strong><span>Deterministic ranking, fulfillment risk, severe weather rule, timeline selector</span></div>
+    <img src="08-new-order-vendor-risk.png" alt="Vendor and risk" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>09 — Stage 4: Order Review & Cost Governance</strong><span>Item summary, cost/benchmark, authority check, submission</span></div>
+    <img src="09-new-order-review.png" alt="Order review" loading="lazy">
+  </div>
+</div>
+
+<!-- ORDER MANAGEMENT -->
+<div class="section-heading" id="orders">
+  <h2>Order Management</h2>
+  <p>Existing orders, detail drawer, past/closed orders.</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>10 — Existing Orders (Filters)</strong><span>Search + Vendor + Ordered By + Delivery Status with persistent labels</span></div>
+    <img src="10-existing-orders.png" alt="Existing orders" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>11 — Order Drawer (Detail)</strong><span>Lifecycle timeline, ETA, proof, messaging, modify/cancel/pickup actions</span></div>
+    <img src="11-order-drawer.png" alt="Order drawer" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>12 — Past Orders</strong><span>Completed, cancelled, returned records with unified timeline</span></div>
+    <img src="12-past-orders.png" alt="Past orders" loading="lazy">
+  </div>
+</div>
+
+<!-- DON / CLINICAL -->
+<div class="section-heading" id="don">
+  <h2>Director of Nursing / Clinical Views</h2>
+  <p>Leadership dashboard, vendor management, quality, reports, messages, settings.</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>13 — DON Home (Leadership Dashboard)</strong><span>PSF recovery, revenue, vendor benchmark, contribution margin inline</span></div>
+    <img src="13-don-home.png" alt="DON home" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>14 — Vendor Management</strong><span>Ranked vendor list (hidden scores), on-time metrics, network controls</span></div>
+    <img src="14-vendor-management.png" alt="Vendor management" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>15 — Vendor Drawer</strong><span>Profile, items, orders, quality events — tabbed detail</span></div>
+    <img src="15-vendor-drawer.png" alt="Vendor drawer" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>16 — Reports (Leadership)</strong><span>Financial performance, cost controls, ranking rules governance</span></div>
+    <img src="16-reports-leadership.png" alt="Reports" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>17 — Messages</strong><span>Order-linked delivery conversations with Active/Unread/Escalations/Archive tabs</span></div>
+    <img src="17-messages.png" alt="Messages" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>18 — Settings</strong><span>Notification channels, event subscriptions, quiet hours, org cost policy</span></div>
+    <img src="18-settings.png" alt="Settings" loading="lazy">
+  </div>
+</div>
+
+<!-- EXECUTIVE -->
+<div class="section-heading" id="executive">
+  <h2>Executive View</h2>
+  <p>Enterprise oversight with full financial and PSF visibility.</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>19 — Executive Home</strong><span>Full leadership dashboard: revenue, margin, PSF recovery, benchmark variance</span></div>
+    <img src="19-executive-home.png" alt="Executive home" loading="lazy">
+  </div>
+</div>
+
+<!-- VENDOR SCREENS -->
+<div class="section-heading" id="vendor">
+  <h2>Vendor Screens</h2>
+  <p>Scoped vendor sign-in, operational portal, and network enrollment.</p>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-label"><strong>20 — Vendor Login</strong><span>Separate auth, scoped access with prefilled demo credentials</span></div>
+    <img src="20-vendor-login.png" alt="Vendor login" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>21 — Vendor Portal (ABC Home Medical)</strong><span>Assigned orders, delivery ETAs, pickup activity — no provider data visible</span></div>
+    <img src="21-vendor-portal.png" alt="Vendor portal" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>22 — Vendor Network Enrollment</strong><span>Tokenized enrollment: company info, equipment, dispatch hours schedule</span></div>
+    <img src="22-vendor-enrollment.png" alt="Vendor enrollment" loading="lazy">
+  </div>
+</div>
+
+<!-- MOBILE -->
+<div class="section-heading" id="mobile">
+  <h2>Mobile Responsive (390px)</h2>
+  <p>Collapsed rail, adapted layouts, touch-optimized controls.</p>
+</div>
+<div class="grid mobile-grid">
+  <div class="card">
+    <div class="card-label"><strong>23 — Mobile Landing</strong><span>Stacked portal tiles, compact hero</span></div>
+    <img src="23-mobile-landing.png" alt="Mobile landing" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>24 — Mobile Home</strong><span>Icon rail, stacked metrics, condensed action center</span></div>
+    <img src="24-mobile-admission-home.png" alt="Mobile home" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>25 — Mobile Existing Orders</strong><span>Full-width filter fields, compact order rows</span></div>
+    <img src="25-mobile-existing-orders.png" alt="Mobile existing orders" loading="lazy">
+  </div>
+  <div class="card">
+    <div class="card-label"><strong>26 — Mobile New Order</strong><span>Single-column form, responsive tabs</span></div>
+    <img src="26-mobile-new-order.png" alt="Mobile new order" loading="lazy">
+  </div>
+</div>
+
+</main>
+
+<footer>
+  BetterRX DME Direct Prototype · All data is synthetic · Generated for consolidation reference
+</footer>
+
+</body>
+</html>
